@@ -1,0 +1,17 @@
+.tecnologia-bg {
+    background-color: var(--cor-11);
+}
+
+.tecnologia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.tecnologia-imagem img {
+    width: 100%; 
+    /* sempre vai pegar o tamanho maximo do container, nunca vai ultrapassa-lo*/
+    height: 100%; /* pega 100% da coluna do grid */
+    object-fit: cover; /* nao esmaga a imagem ela vai mantendo a proporção so vai cortando de acordo quando vai diminuindo */
+    object-position: left; /* sempre vai estar alinhada a esquerda e vai começar a cortar a imagem quando diminuir do lado direito sempre mantendo o lado esquerdo como o lado do inicio*/
+}

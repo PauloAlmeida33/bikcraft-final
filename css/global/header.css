@@ -8,11 +8,8 @@
     gap: 20px;
     justify-content: space-between;
     align-items: center;
-    box-sizing: border-box; /* faz a soma com o padding já dos 1200px inclui o padding */
-    padding: 20px;
-    max-width: 1200px;
-    margin-left: auto; /* tanto o margin left quanto o right auto faz sempre os itens ficarem ao centro mesmo expandindo apos os 12000px */
-    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .header-menu {
