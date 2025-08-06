@@ -1,5 +1,7 @@
 .tecnologia-bg {
     background-color: var(--cor-11);
+    box-shadow: inset 0 80px var(--cor-0), inset 0 -80px var(--cor-0); 
+    /* colocando sombra no container para a foto parecer que esta vazando do container */
 }
 
 .tecnologia {
@@ -14,4 +16,72 @@
     height: 100%; /* pega 100% da coluna do grid */
     object-fit: cover; /* nao esmaga a imagem ela vai mantendo a proporção so vai cortando de acordo quando vai diminuindo */
     object-position: left; /* sempre vai estar alinhada a esquerda e vai começar a cortar a imagem quando diminuir do lado direito sempre mantendo o lado esquerdo como o lado do inicio*/
+}
+
+.tecnologia-conteudo {
+    padding-top: 160px;
+    padding-bottom: 160px;
+    /* dando os espacos para aparecer as sombras */
+}
+
+.tecnologia-conteudo > span {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.tecnologia-conteudo h2 {
+    margin-bottom: 32px;
+}
+
+.tecnologia-conteudo > p {
+    margin-bottom: 20px;
+    /* quando p é filho direto e so tem ele na div colocar o > para seleciona-lo somente ele e nao os que estao em outras divs */
+}
+
+.tecnologia a {
+    margin-bottom: 80px;
+}
+
+.tecnologia-vantagens {
+    display: flex;
+    gap: 20px;
+}
+
+.tecnologia-vantagens h3 {
+    margin-bottom: 8px;
+    width: max-content;
+    /* nunca quebra o titutlo em duas linhas sempre vai ter o tamanho maximo do conteudo h3 */
+}
+
+.tecnologia-vantagens img {
+    width: 24px;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 800px) {
+    .tecnologia-bg{
+        box-shadow: initial;
+        /* significa valor inicial que nao é nada */
+    }
+    .tecnologia {
+        grid-template-columns: 1fr;
+    }
+    .tecnologia-conteudo {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .tecnologia-imagem{
+        display: none;
+        /* sumir com a imagem */
+    }
+    .tecnologia a {
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    .tecnologia-vantagens {
+        flex-direction: column;
+        /* para ele nao quebrar esmagando as linhas e sim quebrar em colunas */
+    }
 }
