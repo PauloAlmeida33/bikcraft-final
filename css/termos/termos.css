@@ -1,0 +1,20 @@
+.termos {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.termos h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* dar um espaço maior entre as sessões, p + h2 vai dar margem só em h2 que venha apos um p ou seja não vai dar espaço na parte de cima */
+
+.termos p + h2 {
+    margin-top: 40px;
+}
+
+.termos p {
+    max-width: 75ch;
+    margin-bottom: 24px;
+}
