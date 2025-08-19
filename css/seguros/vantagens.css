@@ -1,0 +1,42 @@
+.vantagens-bg {
+    background: var(--cor-12);
+    /* criando uma variavel com tamanho em px */
+    --padding: 120px;
+}
+
+.vantagens {
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+}
+
+.vantagens h2 {
+    margin-bottom: 60px;
+}
+
+.vantagens ul {
+    display: grid;
+    /* auto-fit ele vai tentar colocar a quantidade de colunas que der no espaço e essas colunas vao ter no minimo 280px e vai ter o maximo de conteudo que possa ter */
+    grid-template-columns: repeat(auto-fit, minmax(280px, max-content));
+    gap: 40px 80px;
+}
+
+.vantagens h3,
+.vantagens img {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 800px) {
+    .vantagens-bg {
+        --padding: 60px;
+    }
+    .vantagens {
+        padding-top: var(--padding);
+        padding-bottom: var(--padding);
+    }
+    .vantagens h2 {
+        margin-bottom: 40px;
+    }
+    .vantagens ul {
+        gap: 20px;
+    }
+}
