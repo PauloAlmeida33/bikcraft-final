@@ -24,6 +24,30 @@
     background: linear-gradient(#ffb60d, #e59317);
 }
 
+.botao.seta {
+    /* alinhando a seta ao centro */
+    display: flex;
+    align-items: center;
+}
+
+
+
+.botao.seta::after {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 10px;
+    margin-left: 12px;
+    background: url("../../img/icones/seta.svg");
+    /* colocando um tempo para ocorrer a animação da seta */
+    transition: transform 0.2s;
+}
+
+.botao.seta:hover::after {
+    /* animando a seta */
+    transform: translateX(4px);
+}
+
 .botao.secundario {
     background: var(--cor-10);
     color: var(--cor-2);

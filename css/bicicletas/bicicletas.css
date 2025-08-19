@@ -1,0 +1,104 @@
+.bicicletas-bg{
+    background: linear-gradient(to right, white 30%, black 0%);
+    /* background: linear-gradient(to right, blue, red); */
+}
+
+.bicicletas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+.bicicletas-imagem{
+    display: grid;
+}
+
+.bicicletas-imagem img{
+    grid-area: 1/1;
+}
+
+.bicicletas-imagem span {
+    grid-area: 1/1;
+    place-self: start end;
+    margin-top: 20px;
+    background: var(--cor-12);
+    display: inline-block;
+    padding: 8px 16px 8px 8px;
+    /* colocando bordas so nos cantos que eu quero */
+     border-radius: 4px 0 0 5px;
+}
+
+.bicicletas-conteudo {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-content: start;
+}
+
+.bicicletas-conteudo h2,
+.bicicletas-conteudo p {
+    grid-column: 1/-1;
+}
+
+.bicicletas-conteudo {
+    margin-bottom: 20px;
+}
+
+.bicicletas-conteudo h2::before {
+    content: "";
+    display: block;
+    height: 8px;
+    width: 12px;
+    background-color: var(--cor-p1);
+    margin-bottom: 8px;
+}
+
+.bicicletas-conteudo p {
+    margin-bottom: 32px;
+}
+
+.bicicletas-conteudo a {
+    place-self: end;
+}
+
+.bicicletas-conteudo li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.bicicletas-conteudo li + li {
+    margin-top: 16px;
+}
+
+.bicicletas-conteudo img {
+    width: 24px;
+}
+
+@media (max-width: 800px) {
+    .bicicletas-bg {
+        background: black;
+    }
+    .bicicletas{
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .bicicletas-conteudo {
+    grid-template-columns: 1fr;
+    }
+    .bicicletas ul {
+        font-size: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 32px;
+    }
+    .bicicletas a {
+        place-self: start;
+    }
+}
