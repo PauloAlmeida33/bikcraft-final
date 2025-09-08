@@ -18,6 +18,8 @@
     font: 600 1.125rem/1.35 "Poppins", sans-serif;
     /* botao ter o tamanho do conteúdo dele */
     max-width: max-content;
+    border: none;
+    cursor: pointer;
 }
 
 .botao:hover {
@@ -41,6 +43,7 @@
     background: url("../../img/icones/seta.svg");
     /* colocando um tempo para ocorrer a animação da seta */
     transition: transform 0.2s;
+
 }
 
 .botao.seta:hover::after {
